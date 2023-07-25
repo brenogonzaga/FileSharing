@@ -3,6 +3,12 @@ services:
   postgres:
     container_name: postgres-uea
     restart: always
-    build: ./database/postgres
+    build: ./database
     ports:
       - '5432:5432'
+  backend:
+    container_name: backend-uea
+    restart: always
+    build: ./backend
+    ports:
+      - '8080:8080'
