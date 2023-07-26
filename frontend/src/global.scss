@@ -1,0 +1,63 @@
+:root {
+  --clr-text: #12150a;
+  --clr-background: #fffafa;
+  --clr-primary: #68a1b6;
+  --clr-secondary: #f4f7ee;
+  --clr-accent: #7c3c6b;
+
+  --fs-400: clamp(1rem, calc(0.96rem + 0.22vw), 1.13rem);
+  --fs-500: clamp(1.2rem, calc(1.13rem + 0.36vw), 1.41rem);
+  --fs-600: clamp(1.44rem, calc(1.33rem + 0.55vw), 1.76rem);
+  --fs-700: clamp(1.73rem, calc(1.56rem + 0.82vw), 2.2rem);
+  --fs-800: clamp(2.07rem, calc(1.84rem + 1.17vw), 2.75rem);
+  --fs-900: clamp(2.49rem, calc(2.16rem + 1.64vw), 3.43rem);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --clr-text: #fffafa;
+    --clr-background: #081514;
+    --clr-primary: #fb9dc4;
+    --clr-secondary: #ff80ff;
+    --clr-accent: #fba49d;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  color-scheme: light dark;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  font-size: var(--fs-400);
+  color: var(--clr-text);
+  background-color: var(--clr-background);
+}
+
+a {
+  color: var(--clr-primary);
+  text-decoration: none;
+}
+
+button:hover,
+button:focus,
+a:hover,
+a:focus {
+  cursor: pointer;
+  color: var(--clr-accent);
+}

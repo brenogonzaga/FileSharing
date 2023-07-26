@@ -1,0 +1,19 @@
+label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 1px solid var(--clr-primary);
+  border-radius: 4px;
+  font-size: 1rem;
+  color: var(--clr-text);
+  &:focus {
+    outline: none;
+    border-color: var(--clr-accent);
+  }
+}
